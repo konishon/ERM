@@ -1,0 +1,19 @@
+[project]
+name = "erm-geemap"
+version = "0.1.0"
+description = "Extreme Rainfall Monitoring with Geemap"
+authors = [
+    {name = "User",email = "user@example.com"}
+]
+readme = "README.md"
+requires-python = "^3.10"
+dependencies = [
+    "geemap (>=0.36.6,<0.37.0)",
+    "jupyter (>=1.1.1,<2.0.0)",
+    "ipykernel (>=7.1.0,<8.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
