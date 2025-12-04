@@ -40,3 +40,6 @@ Thumbs.db
 # Downloaded data
 *.nc4
 *.nc
+
+.netrc
+/.serena
