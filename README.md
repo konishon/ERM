@@ -4,6 +4,8 @@ Extreme Rainfall Monitoring (ERM) is an experimental tool developed by the Unite
 
 Some of the input was prepared via different platform: ArcGIS Pro, R Statistics, and Excel. ERM module is part of Vulnerability Analysis and Monitoring Platform for Impact of Regional Events ([VAMPIRE](http://vampire.pulselabjakarta.org) - now called PRISM) hazard monitoring module. Some of the analysis has been modified and adjusted to GEE based on data availability and considering the computation resources within GEE. While the methodology written in this document still reflecting what we developed in VAMPIRE.
 
+We are actively migrating the current GEE workflows to FOSS technologies.
+
 This is the single-source documentation for ERM. It is intended to be a thorough, living document detailing the background, objective, data, method and output of ERM. If you find a mistake, please open an issue.
 
 ERM model developed by Benny Istanto and [Prof. Rizaldi Boer](https://scholar.google.com/citations?hl=en&user=jTPXEp8AAAAJ) of Climatology Laboratory - [Bogor Agricultural University](https://ipb.ac.id) as Scientific Advisor.
@@ -21,6 +23,17 @@ ERM model developed by Benny Istanto and [Prof. Rizaldi Boer](https://scholar.go
 ### Demo
 
 [https://bennyistanto.users.earthengine.app/view/wfpid-erm](https://bennyistanto.users.earthengine.app/view/wfpid-erm)
+
+
+### Running the Python notebooks
+
+Python notebooks for data access and geospatial exploration live in `script/`. To run them locally:
+
+1. Install [Poetry](https://python-poetry.org/) and ensure you have a working Python 3.11+ environment.
+2. From the repository root, install dependencies: `poetry install` (add `--with dev` if you need the optional STAC/Planetary Computer tooling).
+3. Start an environment and Jupyter: `poetry run jupyter lab` (or `poetry run jupyter notebook`).
+4. Open the notebook you need from `script/` (for example `erm_geemap.ipynb` or `erm_stac.ipynb`).
+5. For notebooks that call Google Earth Engine, make sure your account is enabled and run `earthengine authenticate` once before executing the cells.
 
 
 ### Contact
